@@ -66,17 +66,17 @@ try:
                 time_display.write(
                     f'CT {current_time}   |   DT {dt_time_frame}   |   DC_DT {dc_dt_time_frame}', format='md')
 
-                if time_diff_min > 3:
-                    time_delay_alert.markdown('<span style="color: red">Data delay greater than 2 minutes!</span>',
-                                              unsafe_allow_html=True)
-                    data_delay_df = pd.read_csv('D:\\Data_Delay_Alert\\Data_Delay_Alert.csv')
-                    data_delay_df['DC_PS_PL_COMPARISON'].iloc[0] = 'Data delay'
-                    data_delay_df.to_csv('D:\\Data_Delay_Alert\\Data_Delay_Alert.csv', index=False)
-                else:
-                    time_delay_alert.write("")
-                    data_delay_df = pd.read_csv('D:\\Data_Delay_Alert\\Data_Delay_Alert.csv')
-                    data_delay_df['DC_PS_PL_COMPARISON'].iloc[0] = 'No data delay'
-                    data_delay_df.to_csv('D:\\Data_Delay_Alert\\Data_Delay_Alert.csv', index=False)
+                # if time_diff_min > 3:
+                #     time_delay_alert.markdown('<span style="color: red">Data delay greater than 2 minutes!</span>',
+                #                               unsafe_allow_html=True)
+                #     data_delay_df = pd.read_csv('D:\\Data_Delay_Alert\\Data_Delay_Alert.csv')
+                #     data_delay_df['DC_PS_PL_COMPARISON'].iloc[0] = 'Data delay'
+                #     data_delay_df.to_csv('D:\\Data_Delay_Alert\\Data_Delay_Alert.csv', index=False)
+                # else:
+                #     time_delay_alert.write("")
+                #     data_delay_df = pd.read_csv('D:\\Data_Delay_Alert\\Data_Delay_Alert.csv')
+                #     data_delay_df['DC_PS_PL_COMPARISON'].iloc[0] = 'No data delay'
+                #     data_delay_df.to_csv('D:\\Data_Delay_Alert\\Data_Delay_Alert.csv', index=False)
 
 
                 complete_df[['Available', 'DC_Margin', 'DCpcnt', 'PL_Margin', 'DC_PSbyPL']] = round(
