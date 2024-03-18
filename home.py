@@ -47,7 +47,7 @@ try:
                 current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
                 # Fetch data
-                complete_df = pd.read_csv('D:\\streamlit_input_files\\dc_ps_pl_comparison\\DC_ps_pl_compare.csv')
+                complete_df = pd.read_csv('DC_ps_pl_compare.csv')
                 dt_time_frame = complete_df['DT'].iloc[0]
                 dt_time_frame = dt_time_frame.split('_')[0].upper()
                 del complete_df['DT']
